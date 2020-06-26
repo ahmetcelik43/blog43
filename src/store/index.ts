@@ -7,10 +7,12 @@ export default new Vuex.Store({
   
  
   state: {
-    IsOpen:false
+    IsOpen:false , Lang:'tr'
   },
   getters: {
-  
+    GetLang: state => {
+      return state.Lang
+    }
   },
   mutations: {
    //fonksiyonlar 
@@ -21,7 +23,16 @@ export default new Vuex.Store({
     CloseSearch2(state)
     {
       state.IsOpen=false;
+    },
+    LangChangeToTR(state)
+    {
+      state.Lang='tr'
+    },
+    LangChangeToUS(state)
+    {
+      state.Lang='us'
     }
+
   },
   /*
   actions: {

@@ -59,7 +59,7 @@ import VueI18n from 'vue-i18n';
 //import i18n from '@/plugins/i18n';
 import i18n from './services/lang';
 
-import FlagIcon from 'vue-flag-icon';
+//import FlagIcon from 'vue-flag-icon';
 //import VuePrismEditor from "vue-prism-editor";
 import "vue-prism-editor/dist/VuePrismEditor.css"; // import the styles
 //Vue.component("prism-editor", VuePrismEditor);
@@ -67,7 +67,7 @@ import "vue-prism-editor/dist/VuePrismEditor.css"; // import the styles
 //Vue.use(VueBootstrapToasts);
 //Vue.component('jw-pagination', JwPagination);
 Vue.use(VueI18n);
-Vue.use(FlagIcon);
+//Vue.use(FlagIcon);
 Vue.config.productionTip = true
 /*
 Vue.config.errorHandler = (err) => {

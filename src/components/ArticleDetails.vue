@@ -106,7 +106,8 @@ searchTexts:[''],searchs:[''],
                     { flag: 'tr', language: 'tr', title: 'Türkçe' },
                     { flag: 'us', language: 'us', title: 'English' }
                 ],
-articleAll:['']
+articleAll:[''],
+Lang:this.$store.getters.GetLang()
          }
   
    

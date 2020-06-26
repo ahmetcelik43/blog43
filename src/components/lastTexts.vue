@@ -2,7 +2,7 @@
 
     <div class="lastTexts">
       <div class="header-last-texts">
-   <a class="last-texts-content-text">Son yazılar</a>
+   <a class="last-texts-content-text">{{$t('LastArticles')}}</a>
 </div>
         <b-container fluid class="container-category">
                <div class="last-texts-content">
@@ -31,11 +31,21 @@ import Vue from 'vue';
 import api from '../services/api';
 import axios from 'axios';
 import router  from '../router/index'
+import i18n from '../services/lang';
+
 export default Vue.extend({
   name: 'Lasttexts',
   data(){
-   return{ lasttexts:[]}
+   return{ lasttexts:[],Lang:this.$store.getters.GetLang
+}
   },
+  
+ watch:{
+    Lang: function (val) {
+           return  i18n.locale = val;
+
+},
+ 
  async created()
   {
  await axios({

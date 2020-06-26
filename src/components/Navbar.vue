@@ -4,6 +4,12 @@
     <b-navbar-brand href="/"><h4>Ahmet Çelik </h4> <h6>Kişisel blog</h6></b-navbar-brand>
 
       <b-navbar-nav class="ml-auto">
+        <b-nav-item>
+          <b-dropdown text="Dili Değiştir">
+    <b-dropdown-item @click="DiliDegistir('us')" href="#">English</b-dropdown-item>
+    <b-dropdown-item @click="DiliDegistir('tr')" href="#">Türkçe</b-dropdown-item>
+  </b-dropdown>
+       </b-nav-item>
        <b-nav-item>
            <a class="search-text-input" @click="OpenOrCloseSearch()">
          <vue-fontawesome icon="search" size="3" color="gray"> 
@@ -45,6 +51,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import store from '../store/index';
 
 export default Vue.extend({
   name: 'Navbar',
@@ -66,6 +73,15 @@ export default Vue.extend({
    //this.$emit('Search2Channel',false);
   },
   methods:{
+    DiliDegistir(lang)
+    {
+      if(lang=='tr')
+         this.$store.commit('LangChangeToTR')
+      else
+         this.$store.commit('LangChangeToUS')
+   
+
+    },
 OpenOrCloseSearch()
 {
   //console.log("work-1")
