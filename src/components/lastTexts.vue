@@ -44,7 +44,7 @@ export default Vue.extend({
     Lang: function (val) {
            return  i18n.locale = val;
 
-},
+}
  },
  async created()
   {
