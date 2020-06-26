@@ -192,7 +192,7 @@ if(data) {
 
 this.isGeriDisabled=true;
 
- data.forEach((value, index) => {
+ data.forEach((value: any, index: any) => {
    
 this.searchs.push(value.baslik);
 
@@ -242,7 +242,7 @@ else
 
   methods:{
   
-    k(articles)
+    k(articles: any)
     {
   //this.paginatedArticles=articles.slice(5,this.articlesLength);
   this.paginatedArticles=articles.slice(0,this.perpage);//0-4 arası
@@ -297,7 +297,7 @@ close()
 {
 this.searchText=''
 },
-searchevent(value)
+searchevent(value: any)
 {
             //event.preventDefault();
 this.spinner=true
@@ -352,7 +352,7 @@ geri()
   
 },
    
- checkForm: function (e) {
+ checkForm: function (e: any) {
 this.searchText=e.target.value
      if (this.searchText!='') {
 if (e.keyCode === 13) {

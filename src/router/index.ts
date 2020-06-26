@@ -4,7 +4,6 @@ import Home from '../views/Home.vue'
 
 import articleadd from '@/components/Admin/articleadd.vue'
 import login from '@/components/Admin/login.vue'
-import error from '../components/error.vue';
 import ArticleDetails from '@/components/ArticleDetails.vue';
 
 import notfound from '@/components/notfound.vue';
@@ -42,13 +41,7 @@ Vue.use(VueRouter)
     component: ArticleDetails,
     
   },
-  
-  {
-    path: '/error',
-    name: 'error',
-    component: error
-  },
-   
+ 
   {
     path: '/notfound',
     name: 'notfound',

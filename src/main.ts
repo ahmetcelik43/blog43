@@ -109,7 +109,7 @@ Vue.prototype.$http.interceptors.response.use(
   }
 );
 */
-function errorResponseHandler(error) {
+function errorResponseHandler(error: any) {
   // check for errorHandle config
  
 

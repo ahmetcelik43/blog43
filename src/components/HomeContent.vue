@@ -194,7 +194,7 @@ export default Vue.extend({
        let tempData={}
        if(data)
        {
-          data.forEach((value, index) => {
+          data.forEach((value: any, index: any) => {
   
 //this.searchs.push(value.baslik);
 tempData={
@@ -263,7 +263,7 @@ else
   },
 
   methods:{
-    redirectToDetails(baslik)
+    redirectToDetails(baslik: any)
     {
       //alert(1)
     router.push({name:'ArticleDetails',params:{baslik:baslik}})
@@ -303,7 +303,7 @@ this.searchText='';
 
 }
     }, */
-    k(articles)
+    k(articles: any)
     {
   //this.paginatedArticles=articles.slice(5,this.articlesLength);
   this.paginatedArticles=articles.slice(0,this.perpage);//0-4 arası

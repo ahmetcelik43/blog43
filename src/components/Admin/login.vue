@@ -97,7 +97,7 @@ export default Vue.extend({
   }
 },
 */
-    login(e)
+    login(e: any)
     {
         e.preventDefault();
 

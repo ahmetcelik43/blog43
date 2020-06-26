@@ -95,7 +95,7 @@ this.searchText=''
 
 
 },
-searchevent(value)
+searchevent(value: any)
 {
   //this.spinner=true
   this.searchText=value
@@ -106,7 +106,7 @@ searchevent(value)
 },
 
    
- checkForm: function (e) {
+ checkForm: function (e: any) {
        e.preventDefault();
 
 //this.searchText=e.target.value

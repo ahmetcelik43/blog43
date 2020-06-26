@@ -13,7 +13,7 @@
       </template>
 
       <p class="overflowed-texts-p">
-      <a :href="'/articledetails?baslik='+encodeURI(text.baslik)"> {{text.baslik}}</a>
+      <a :href="'/articledetails/'+encodeURI(text.baslik)"> {{text.baslik}}</a>
       </p>
       <p class="last-texts-time">
        <vue-fontawesome class="icons"  icon="clock"  color="lightgray"> </vue-fontawesome> {{text.createdAt}}  
@@ -85,7 +85,7 @@ else
           });
   },
   methods:{
-hrefArticleDetails(baslik)
+hrefArticleDetails(baslik: any)
 {
 
   //this.$root.$router('/articledetails/'+encodeURIComponent(baslik));

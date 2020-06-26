@@ -179,7 +179,7 @@ close()
 {
 this.searchText=''
 },
-searchevent(value)
+searchevent(value: any)
 {
             //event.preventDefault();
 this.spinner=true
@@ -189,10 +189,10 @@ this.spinner=true
 
 
 },
-    changeLocale(locale) {
+    changeLocale(locale: any) {
                 i18n.locale = locale;
             },
-  checkForm: function (e) {
+  checkForm: function (e: any) {
 this.searchText=e.target.value
      if (this.searchText!='') {
 if (e.keyCode === 13) {
@@ -230,7 +230,7 @@ else
 
      
     },
-     searchOnSubmit(e:any)
+     searchOnSubmit(e: any)
      {
        console.log("submited")
        //this.$root.$router.push('/searchResultPage/'+this.searchText)

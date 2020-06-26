@@ -73,7 +73,7 @@ export default Vue.extend({
    //this.$emit('Search2Channel',false);
   },
   methods:{
-    DiliDegistir(lang)
+    DiliDegistir(lang: any)
     {
       if(lang=='tr')
          this.$store.commit('LangChangeToTR')
