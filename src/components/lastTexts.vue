@@ -45,7 +45,7 @@ export default Vue.extend({
            return  i18n.locale = val;
 
 },
- 
+ },
  async created()
   {
  await axios({
