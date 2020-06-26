@@ -1,18 +1,48 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <Navbar/>
+  <br>
+    <HomeContent/>
+    <br>
+    <br><br>
+    <br>
+    <Footer/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Navbar from '@/components/Navbar.vue'
+import HomeContent from '@/components/HomeContent.vue'
+import Footer from '@/components/Footer.vue'
+import Vue from 'vue';
+/*
+Vue.directive('focus', {
+  // When the bound element is inserted into the DOM...
+ 
+ bind () {
+   console.log(232)
+      this.event = event => this.vm.$emit(this.expression, event)
+      //this.el.addEventListener('click', this.stopProp)
+      document.body.addEventListener('click', this.event)
+  },   
 
-export default {
+
+
+})*/
+export default Vue.extend({
   name: 'Home',
   components: {
-    HelloWorld
-  }
-}
+    Navbar,HomeContent,Footer
+  },
+  
+})
 </script>
+<style scoped>
+.home
+{
+  display:flex; 
+  flex-direction:column; 
+}
+</style>
